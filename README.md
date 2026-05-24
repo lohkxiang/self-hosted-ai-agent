@@ -165,7 +165,9 @@ https://[your-subdomain].[your-domain]/webhook/[your-path]
 
 Point external services (Slack, GitHub, payment providers, etc.) to this URL to trigger your workflows.
 
-If you're calling n8n webhooks directly from a browser-based frontend, you'll hit CORS errors by default. Add these environment variables to the `n8n` service in your compose file:
+**Most setups don't need this.** If your workflows are triggered by external services (Slack, GitHub, payment providers, etc.), those are server-to-server calls — CORS doesn't apply.
+
+CORS only matters if you're calling n8n webhooks directly from a browser-based frontend (e.g. a chat UI or web app you built). In that case, add these environment variables to the `n8n` service in your compose file:
 
 ```yaml
 - N8N_CORS_ENABLED=true
