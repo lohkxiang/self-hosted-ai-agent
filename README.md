@@ -172,7 +172,7 @@ If you're calling n8n webhooks directly from a browser-based frontend, you'll hi
 - N8N_CORS_ALLOWED_ORIGINS=https://yourdomain.com
 ```
 
-Replace `https://yourdomain.com` with the origin making the request. Use `*` to allow all origins during development only — not for production use.
+Replace `https://yourdomain.com` with the URL of the website or app making the call (e.g. `https://myapp.com`). Use `*` to allow all sources during development only — not for production use.
 
 ---
 
