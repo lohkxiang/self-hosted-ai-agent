@@ -132,7 +132,7 @@ By default, n8n handles everything in a single process. Under load, a heavy work
 
 **How many workers should you run?**
 
-The setup script calculates this automatically — you don't need to choose. It allocates remaining RAM after all other services are provisioned, fits as many workers as possible at 512MB minimum each, and caps at 10. Re-run `./setup.sh` if you move to a larger VPS.
+The setup script calculates this automatically — you don't need to choose. It allocates remaining RAM after all other services are provisioned, fits as many workers as possible at 512MB minimum each, then caps at twice your core count to avoid CPU contention. Re-run `./setup.sh` if you move to a larger VPS.
 
 ---
 
